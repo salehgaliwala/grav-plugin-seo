@@ -57,7 +57,7 @@ class SEOPlugin extends Plugin
 
         // Ensure we only process page blueprints and it has the tabs structure
         if ($blueprint && $blueprint->get('form/fields/tabs', null, '/')) {
-            $blueprints = new \Grav\Common\Config\Blueprints(__DIR__ . '/blueprints/');
+            $blueprints = new \Grav\Common\Data\Blueprints(__DIR__ . '/blueprints/');
             $extends = $blueprints->get('seo');
             if ($extends) {
                 $blueprint->extend($extends, true);
