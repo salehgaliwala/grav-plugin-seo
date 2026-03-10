@@ -1,0 +1,12 @@
+enabled: true
+site_name: 'My Grav Site'
+description: 'Default site description'
+robots: 'index, follow'
+og:
+  enabled: true
+  type: website
+  image: 'user/plugins/seo/assets/default-og.png'
+twitter:
+  enabled: true
+  card: summary_large_image
+  site: '@yourhandle'

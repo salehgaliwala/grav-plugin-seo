@@ -1,0 +1,22 @@
+{
+    "name": "salehgaliwala/grav-plugin-seo",
+    "type": "grav-plugin",
+    "description": "A comprehensive SEO plugin for Grav CMS, similar to Yoast SEO for WordPress.",
+    "keywords": ["grav", "plugin", "seo", "meta", "og", "twitter"],
+    "homepage": "https://github.com/salehgaliwala/grav-plugin-seo",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Saleh Galiwala",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Grav\\Plugin\\": "classes/"
+        }
+    }
+}

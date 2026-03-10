@@ -1,0 +1,96 @@
+name: SEO
+version: 1.0.0
+description: A comprehensive SEO plugin for Grav CMS.
+icon: search-plus
+author:
+  name: Saleh Galiwala
+homepage: https://github.com/salehgaliwala/grav-plugin-seo
+keywords: grav, plugin, seo, meta, og, twitter
+bugs: https://github.com/salehgaliwala/grav-plugin-seo/issues
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+
+    site_name:
+      type: text
+      label: Site Name
+      help: Global site name used in title tags.
+    
+    description:
+      type: textarea
+      label: Default Description
+      help: Fallback description if page description is missing.
+
+    robots:
+      type: select
+      label: Default Robots
+      default: 'index, follow'
+      options:
+        'index, follow': 'Index, Follow'
+        'noindex, follow': 'Noindex, Follow'
+        'index, nofollow': 'Index, Nofollow'
+        'noindex, nofollow': 'Noindex, Nofollow'
+
+    og_section:
+      type: section
+      title: Open Graph Defaults
+      underline: true
+
+    og.enabled:
+      type: toggle
+      label: Enable Open Graph
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+
+    og.type:
+      type: text
+      label: Default OG Type
+      default: website
+
+    og.image:
+      type: filepicker
+      label: Default OG Image
+      folder: 'self@'
+      preview_images: true
+
+    twitter_section:
+      type: section
+      title: Twitter Card Defaults
+      underline: true
+
+    twitter.enabled:
+      type: toggle
+      label: Enable Twitter Cards
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+
+    twitter.card:
+      type: select
+      label: Default Card Type
+      default: summary_large_image
+      options:
+        'summary': 'Summary'
+        'summary_large_image': 'Summary Large Image'
+        'app': 'App'
+        'player': 'Player'
+
+    twitter.site:
+      type: text
+      label: Twitter Site Handle
+      placeholder: '@yourhandle'

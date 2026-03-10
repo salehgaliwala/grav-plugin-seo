@@ -1,0 +1,82 @@
+form:
+  fields:
+    tabs:
+      fields:
+        seo:
+          type: tab
+          title: SEO
+          fields:
+            seo_section:
+              type: section
+              title: Page Meta Tags
+              underline: true
+            
+            header.seo.title:
+              type: text
+              label: SEO Title
+              help: Overrides the page title in the <title> tag.
+            
+            header.seo.description:
+              type: textarea
+              label: Meta Description
+              help: Overrides the global default description.
+
+            header.seo.canonical:
+              type: text
+              label: Canonical URL
+              help: Overrides the automatically generated canonical URL.
+            
+            header.seo.keyphrase:
+              type: text
+              label: Focus Keyphrase
+              help: Main keyphrase for this page (for metadata).
+
+            header.seo.robots:
+              type: select
+              label: Robots
+              help: Overrides global robots setting.
+              placeholder: 'Use Global Default'
+              options:
+                '': 'Use Global Default'
+                'index, follow': 'Index, Follow'
+                'noindex, follow': 'Noindex, Follow'
+                'index, nofollow': 'Index, Nofollow'
+                'noindex, nofollow': 'Noindex, Nofollow'
+
+            og_section:
+              type: section
+              title: Open Graph Overrides
+              underline: true
+
+            header.seo.og_title:
+              type: text
+              label: OG Title
+
+            header.seo.og_description:
+              type: textarea
+              label: OG Description
+
+            header.seo.og_image:
+              type: filepicker
+              label: OG Image
+              folder: 'self@'
+              preview_images: true
+
+            twitter_section:
+              type: section
+              title: Twitter Card Overrides
+              underline: true
+
+            header.seo.twitter_title:
+              type: text
+              label: Twitter Title
+
+            header.seo.twitter_description:
+              type: textarea
+              label: Twitter Description
+
+            header.seo.twitter_image:
+              type: filepicker
+              label: Twitter Image
+              folder: 'self@'
+              preview_images: true
